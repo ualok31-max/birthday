@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A romantic birthday surprise for Anurag from Sofiya."
+    />
+    <title>For The One I Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div id="floating-hearts" aria-hidden="true"></div>
+    <div id="balloons-layer" aria-hidden="true"></div>
+    <div id="particles" aria-hidden="true"></div>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <div id="opening-screen" class="opening-screen">
+      <div class="opening-content reveal-up">
+        <p class="eyebrow">For The One I Love ❤️</p>
+        <h1>A Little Birthday Surprise</h1>
+        <p class="opening-subtitle">
+          I made something special for you...
+        </p>
+        <p class="opening-copy">
+          Because you deserve more than just a birthday wish.
+        </p>
+        <h2>Happy Birthday, Anurag ❤️</h2>
+        <button class="primary-button start-story" type="button">
+          Start Our Story ❤️
+        </button>
+      </div>
+    </div>
+
+    <button id="music-toggle" class="music-toggle" type="button" aria-label="Toggle music">
+      <span class="music-icon">♫</span>
+      <span class="music-label">Music</span>
+    </button>
+
+    <audio id="birthday-music" preload="auto" loop aria-label="Birthday music">
+      <source src="./assets/music/birthday.mp3" type="audio/mpeg" />
+    </audio>
+
+    <main class="page-shell">
+      <section id="hero" class="hero panel reveal-on-scroll">
+        <div class="hero-content">
+          <p class="eyebrow">For The One I Love ❤️</p>
+          <h1>A Little Birthday Surprise</h1>
+          <h2>Happy Birthday, Anurag</h2>
+          <p class="signature">From Sofiya ❤️</p>
+          <button class="primary-button story-scroll" type="button">Start Our Story</button>
+        </div>
+      </section>
+
+      <section id="beginning" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">Our Story</p>
+          <h2>Our Beginning</h2>
+        </div>
+        <div class="story-intro-wrap">
+          <p id="beginning-text" class="story-intro typewriter-text"></p>
+        </div>
+      </section>
+
+      <section id="timeline" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">The Day We Met</p>
+          <h2>The Day We Met</h2>
+        </div>
+        <div id="timeline-list" class="timeline-list" aria-live="polite"></div>
+      </section>
+
+      <section id="special" class="panel special reveal-on-scroll">
+        <div class="special-inner">
+          <p class="special-script" id="special-line-1">Some people enter your life quietly...</p>
+          <p class="special-script emphasis" id="special-line-2">
+            and somehow become your favorite part of it.
+          </p>
+          <p class="special-reveal" id="special-reveal">That's what you became to me, Anurag. ❤️</p>
+        </div>
+      </section>
+
+      <section id="gallery" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">Photos</p>
+          <h2>Our Photos</h2>
+        </div>
+        <div id="photo-gallery" class="photo-gallery" aria-live="polite"></div>
+      </section>
+
+      <section id="love" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">What I Love</p>
+          <h2>Things I Love About You</h2>
+        </div>
+        <div id="love-grid" class="love-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="little-things" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">Us</p>
+          <h2>Little Things About Us</h2>
+        </div>
+        <div id="little-grid" class="little-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="letter" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">A Letter</p>
+          <h2>My Letter To You</h2>
+        </div>
+        <article class="letter-card">
+          <p class="letter-heading">Dear Anurag, ❤️</p>
+          <div id="love-letter" class="love-letter" aria-live="polite"></div>
+        </article>
+      </section>
+
+      <section id="countdown" class="panel reveal-on-scroll">
+        <div class="section-heading">
+          <p class="eyebrow">Countdown</p>
+          <h2>Birthday Countdown</h2>
+        </div>
+        <div class="countdown-wrap">
+          <div id="countdown-display" class="countdown-display" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="surprise" class="panel surprise reveal-on-scroll">
+        <div class="surprise-shell">
+          <p class="surprise-kicker">One Last Thing...</p>
+          <button id="surprise-button" class="primary-button" type="button">
+            Open Your Surprise ❤️
+          </button>
+          <div id="surprise-reveal" class="surprise-reveal" aria-live="polite">
+            <h3>Happy Birthday, Anurag Singh ❤️</h3>
+            <p>With all my love,<br />Sofiya ❤️</p>
+            <div id="final-message" class="final-message"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close-lightbox="true"></div>
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Photo preview">
+        <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+        <button class="lightbox-nav nav-prev" type="button" aria-label="Previous photo">‹</button>
+        <div class="lightbox-image-wrap">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <button class="lightbox-nav nav-next" type="button" aria-label="Next photo">›</button>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
