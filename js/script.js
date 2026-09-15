@@ -1,5 +1,5 @@
 const CONFIG = {
-  boyfriendName: "Anurag Singh",
+  boyfriendName: "Sunshine",
   girlfriendName: "Sofiya",
   birthdayDate: "2026-09-16T00:00:00",
   musicPath: "./assets/music/birthday.mp3",
